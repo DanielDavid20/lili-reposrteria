@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget de Página de Facebook</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mi Página de Facebook - Lili Repostería</h1>
+    </header>
+
+    <div class="container">
+        <!-- Sección de Información sobre Lili -->
+        <section class="info">
+            <h2>Sobre Lili</h2>
+            <p>Lili es una experta repostera que se especializa en pasteles y postres deliciosos. Con más de 10 años de experiencia, Lili ofrece una variedad de opciones para cada ocasión.</p>
+        </section>
+
+        <!-- Sección de Galería -->
+        <section class="gallery">
+            <h2>Galería</h2>
+            <div class="gallery-images">
+                <img src="cake1.jpg" alt="Pastel de Chocolate" />
+                <img src="cake2.jpg" alt="Pastel de Fresa" />
+                <img src="cake3.jpg" alt="Tarta de Limón" />
+                <img src="cake4.jpg" alt="Galletas Decoradas" />
+            </div>
+        </section>
+
+        <!-- Integración de Facebook -->
+        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61561192434782" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/profile.php?id=61561192434782" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/profile.php?id=61561192434782">Lili Repostería</a>
+            </blockquote>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Lili Repostería. Todos los derechos reservados.
+    </footer>
+
+    <!-- Incluir SDK de Facebook para JavaScript -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v13.0"></script>
+</body>
+
+</html>
