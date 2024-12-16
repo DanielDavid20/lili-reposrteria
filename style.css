@@ -7,50 +7,104 @@ body {
     min-height: 100vh; /* Ocupa toda la altura de la ventana */
     margin: 0; /* Elimina márgenes predeterminados */
     font-family: 'Arial', sans-serif; /* Fuente general */
-    background-color: #f4f4f4; /* Color de fondo suave */
+    background-color: #d5f5df; /* Color de fondo más claro */
+    color: #333; /* Color de texto oscuro para buena legibilidad */
 }
 
 /* Estilo del header */
 header {
-    background-color: #ff33e4; /* Color de fondo del header */
+    background: linear-gradient(to right, #f8b1ef, #ae82ff); /* Degradado atractivo */
     color: white; /* Color del texto del header */
     text-align: center; /* Alineación del texto */
-    padding: 15px 0; /* Espaciado superior e inferior */
     width: 100%; /* Asegura que el header ocupa todo el ancho */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para profundidad */
+}
+/* Estilo para el logo en el encabezado */
+.logo {
+    width: 100px; /* Ancho del logo */
+    height: auto; /* Altura automática para mantener la proporción */
 }
 
+     /* Estilos para el menú */
+     .menu {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #fcf6fd;
+        min-width: 120px;
+        box-shadow: 0 4px 8px rgb(28, 56, 21);
+        border-radius: 5px;
+        padding: 8px;
+        z-index: 1;
+        text-align: left;
+    }
+    
+    .menu-content a {
+        display: block;
+        padding: 6px 12px;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        font-size: 16px; /* Tamaño del texto de los enlaces */
+    }
+    
+    .menu-content a:hover {
+        background-color: #b9f1c1;
+    }
+
+    .menu span {
+        font-size: 30px; /* Aumento del tamaño del icono */
+    }
+
+    .menu:hover .menu-content {
+        display: block;
+    }
 /* Estilo del título del header */
 header h1 {
     margin: 0; /* Elimina margen */
-    font-size: 1.8em; /* Tamaño del texto */
+    font-size: 2em; /* Tamaño del texto más grande */
+    font-weight: bold; /* Negrita para mayor énfasis */
 }
 
 /* Contenedor principal */
 .container {
     width: 90%; /* Ancho del contenedor */
     max-width: 800px; /* Ancho máximo para dispositivos grandes */
-    margin: 20px auto; /* Margen superior e inferior, centrado horizontalmente */
-    padding: 20px; /* Espaciado interno del contenedor */
-    background-color: white; /* Color de fondo blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del contenedor */
+    margin: 40px auto; /* Mayor margen superior e inferior, centrado horizontalmente */
+    padding: 30px; /* Espaciado interno del contenedor */
+    background-color: rgb(247, 239, 255); /* Color de fondo blanco */
+    border-radius: 12px; /* Bordes redondeados más suaves */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
+    transition: transform 0.3s ease; /* Efecto suave al interactuar */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Efecto hover para elevar el contenedor */
 }
 
 /* Estilo para las secciones */
 section {
-    margin: 20px 0; /* Margen superior e inferior para las secciones */
+    margin: 30px 0; /* Mayor margen superior e inferior para secciones */
 }
 
 /* Estilo del título de las secciones */
 section h2 {
-    margin-bottom: 10px; /* Margen inferior del título */
-    color: #385898; /* Color del texto del título */
+    margin-bottom: 15px; /* Margen inferior del título */
+    color: #ffffff; /* Color del texto del título */
+    font-size: 1.6em; /* Un tamaño de fuente más destacado */
+    border-bottom: 2px solid #efefef; /* Línea debajo del título para separación */
+    padding-bottom: 5px; /* Espaciado inferior del título */
 }
 
 /* Estilo del texto de la sección de información */
 .info p {
-    font-size: 1.1em; /* Tamaño de fuente */
-    line-height: 1.6; /* Altura de línea para mayor legibilidad */
+    font-size: 1.2em; /* Tamaño de fuente más legible */
+    line-height: 1.8; /* Altura de línea para mayor legibilidad */
+    margin: 10px 0; /* Margen entre párrafos */
 }
 
 /* Estilo de la galería */
@@ -69,18 +123,38 @@ section h2 {
     width: calc(50% - 10px); /* Dos imágenes por fila con márgenes */
     max-width: 180px; /* Ancho máximo de las imágenes */
     margin: 5px; /* Espaciado entre imágenes */
-    border-radius: 5px; /* Bordes redondeados en las imágenes */
+    border-radius: 8px; /* Bordes redondeados más pronunciados */
+    transition: transform 0.3s ease; /* Suave transformación en hover */
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05); /* Efecto hover para imágenes */
+}
+/* Estilo para el logo de WhatsApp */
+.whatsapp-logo {
+    width: 5px; /* Ancho del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 5px; /* Margen a la derecha para separarlo del texto */
+}
+
+/* Estilo para el contenedor de Facebook */
+.fb-container {
+    display: flex; /* Utiliza Flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido si es necesario */
+    margin: 40px auto; /* Aumentar el margen para una mejor separación */
+    padding: 10px; /* Espaciado interno */
 }
 
 /* Estilo para la página de Facebook */
 .fb-page {
-    margin: 20px auto; /* Margen superior e inferior y centrado horizontal */
-    max-width: 500px; /* Ancho máximo para el bloque */
-    width: 100%; /* Ancho completo, asegurando que no sobresalga */
-    border-radius: 8px; /* Bordes redondeados */
+    margin: 0 auto; /* Centra el bloque Facebook dentro del contenedor */
+    max-width: 100%; /* Ancho completo relativo al contenedor */
+    width: calc(100% - 20px); /* Ancho completo menos márgenes */
+    border-radius: 10px; /* Bordes redondeados */
     overflow: hidden; /* Para evitar desbordamiento */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    display: flex; /* Para centrar el contenido interno en caso de visualizar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    display: flex; /* Para centrar el contenido interno */
     justify-content: center; /* Centra el contenido interno horizontalmente */
 }
 
@@ -95,10 +169,11 @@ footer {
     background-color: #385898; /* Color de fondo del pie de página */
     color: white; /* Color del texto */
     text-align: center; /* Alineación centrada del texto */
-    padding: 10px 0; /* Espacio superior e inferior */
+    padding: 20px; /* Espacio superior e inferior incrementado */
     width: 100%; /* Asegura que el footer cubre todo el ancho */
     position: relative; /* Posicionamiento relativo para el pie */
     bottom: 0; /* Coloca el pie al final */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15); /* Sombra superior para profundidad */
 }
 
 /* Media Queries para Responsividad */
@@ -108,7 +183,7 @@ footer {
     }
 
     .container {
-        padding: 10px; /* Reduce el padding del contenedor en dispositivos más pequeños */
+        padding: 15px; /* Reduce el padding del contenedor en dispositivos más pequeños */
     }
 
     .info p {
@@ -125,6 +200,6 @@ footer {
     }
 
     section h2 {
-        font-size: 1.5em; /* reducido tamaño para secciones en móviles */
+        font-size: 1.5em; /* Reducido tamaño para secciones en móviles */
     }
 }
