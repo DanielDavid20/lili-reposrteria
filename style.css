@@ -6,15 +6,16 @@ body {
     align-items: center; /* Centra horizontalmente */
     min-height: 100vh; /* Ocupa toda la altura de la ventana */
     margin: 0; /* Elimina márgenes predeterminados */
-    font-family: 'Arial', sans-serif; /* Fuente general */
-    background-color: #d5f5df; /* Color de fondo más claro */
-    color: #333; /* Color de texto oscuro para buena legibilidad */
+     font-family: 'Brush Script MT', cursive; /* Fuente general en cursiva */
+    background-image: url(imagenes/fondo.jpg); /* Color de fondo más claro */
+    color: #1b460e; /* Color de texto oscuro para buena legibilidad */
+    font-size: 25px;
 }
 
 /* Estilo del header */
 header {
-    background: linear-gradient(to right, #f8b1ef, #ae82ff); /* Degradado atractivo */
-    color: white; /* Color del texto del header */
+    background: linear-gradient(to right, #cb9bf3, #9cf793); /* Degradado atractivo */
+    color: rgb(21, 61, 26); /* Color del texto del header */
     text-align: center; /* Alineación del texto */
     width: 100%; /* Asegura que el header ocupa todo el ancho */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para profundidad */
@@ -34,7 +35,7 @@ header {
     .menu-content {
         display: none;
         position: absolute;
-        background-color: #fcf6fd;
+        background-color: #f9d8ff;
         min-width: 120px;
         box-shadow: 0 4px 8px rgb(28, 56, 21);
         border-radius: 5px;
@@ -46,7 +47,7 @@ header {
     .menu-content a {
         display: block;
         padding: 6px 12px;
-        color: #333;
+        color: #113a1d;
         text-decoration: none;
         transition: background-color 0.3s;
         font-size: 16px; /* Tamaño del texto de los enlaces */
@@ -76,9 +77,9 @@ header h1 {
     max-width: 800px; /* Ancho máximo para dispositivos grandes */
     margin: 40px auto; /* Mayor margen superior e inferior, centrado horizontalmente */
     padding: 30px; /* Espaciado interno del contenedor */
-    background-color: rgb(247, 239, 255); /* Color de fondo blanco */
+    background-color: rgba(243, 227, 252, 0.8); /* Color de fondo blanco con transparencia */
     border-radius: 12px; /* Bordes redondeados más suaves */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3); /* Sombra más suave en blanco */
     transition: transform 0.3s ease; /* Efecto suave al interactuar */
 }
 
@@ -91,7 +92,7 @@ section {
 /* Estilo del título de las secciones */
 section h2 {
     margin-bottom: 15px; /* Margen inferior del título */
-    color: #ffffff; /* Color del texto del título */
+    color: #0d2c14; /* Color del texto del título */
     font-size: 1.6em; /* Un tamaño de fuente más destacado */
     border-bottom: 2px solid #efefef; /* Línea debajo del título para separación */
     padding-bottom: 5px; /* Espaciado inferior del título */
@@ -163,13 +164,14 @@ section h2 {
 
 /* Estilo del footer */
 footer {
-    background-color: #385898; /* Color de fondo del pie de página */
-    color: white; /* Color del texto */
+    background-color: #c983f1; /* Color de fondo del pie de página */
+    color: rgb(41, 77, 26); /* Color del texto */
     text-align: center; /* Alineación centrada del texto */
     padding: 20px; /* Espacio superior e inferior incrementado */
-    width: 100%; /* Asegura que el footer cubre todo el ancho */
-    position: relative; /* Posicionamiento relativo para el pie */
+    width: 90%; /* Asegura que el footer cubre todo el ancho */
+   
     bottom: 0; /* Coloca el pie al final */
+    left: 10; /* Alinea el pie a la izquierda */
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15); /* Sombra superior para profundidad */
 }
 
@@ -208,8 +210,28 @@ footer {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* Añade bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    animation: colorChange 5s infinite; /* Animación de cambio de color infinita */
+}
+
+.btn:active {
+    background-color: #146b0b; /* Cambia el color cuando se presiona el botón */
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #4fca44; /* Verde inicial */
+    }
+    50% {
+        background-color: #a23bdd; /* Púrpura a la mitad de la animación */
+    }
+    100% {
+        background-color: #238a1a; /* Vuelve a verde al final */
+    }
 }
 
 .button-container {
     margin-top: 20px;
+    text-align: center; /* Centra el botón horizontalmente */
 }
