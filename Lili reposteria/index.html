@@ -4,41 +4,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Widget de Página de Facebook</title>
+    <title>Lili Repostería</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <h1>Mi Página de Facebook - Lili Repostería</h1>
+        <div class="logo-container">
+            <img src="imagenes/logo.png" alt="Logo de Lili Repostería" class="logo">
+        </div>
+        <h1>Lili Repostería block</h1>
+        <div class="menu">
+            <span>☰</span>
+            <div class="menu-content">
+                <a href="https://web.facebook.com/people/Lili-Reposter%C3%ADa/61561192434782/?ref=embed_page">Página de Facebook</a>
+                <a href="https://web.whatsapp.com/">WhatsApp</a>
+            </div>
+        </div>
     </header>
-
     <div class="container">
         <!-- Sección de Información sobre Lili -->
         <section class="info">
             <h2>Sobre Lili</h2>
             <p>Lili es una experta repostera que se especializa en pasteles y postres deliciosos. Con más de 10 años de experiencia, Lili ofrece una variedad de opciones para cada ocasión.</p>
         </section>
-
-        <!-- Sección de Galería -->
-        <section class="gallery">
-            <h2>Galería</h2>
-            <div class="gallery-images">
-                <img src="cake1.jpg" alt="Pastel de Chocolate" />
-                <img src="cake2.jpg" alt="Pastel de Fresa" />
-                <img src="cake3.jpg" alt="Tarta de Limón" />
-                <img src="cake4.jpg" alt="Galletas Decoradas" />
-            </div>
-        </section>
-
-        <!-- Integración de Facebook -->
-        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61561192434782" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/profile.php?id=61561192434782" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/profile.php?id=61561192434782">Lili Repostería</a>
-            </blockquote>
+<!-- Sección de Galería -->
+<section class="gallery">
+    <h2>Tortas personalizadas</h2>
+    <div class="gallery-images">
+        <div class="image-container">
+            <img src="imagenes/imagen 1.jpeg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+        <div class="image-container">
+            <img src="imagenes/imagen 2.jpeg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+        <div class="image-container">
+            <img src="imagenes/imagen3.jpeg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+        <div class="image-container">
+            <img src="imagenes/imagen 4.jpeg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
         </div>
     </div>
+</section>
 
+<section class="gallery">
+    <h2>Panadería</h2>
+    <div class="gallery-images">
+        <div class="image-container">
+            <img src="imagenes/pan 4.jpg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+        <div class="image-container">
+            <img src="imagenes/pan1.jpg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+        <div class="image-container">
+            <img src="imagenes/pan2.jpg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+        <div class="image-container">
+            <img src="imagenes/pan3.jpg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+        <div class="image-container">
+            <img src="imagenes/pan5.jpg" alt="" />
+            <button class="fullscreen-btn" onclick="openModal(this.previousElementSibling.src, this.previousElementSibling.alt); event.stopPropagation();">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for displaying images -->
+<div id="imageModal" class="modal" style="display:none;">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+
+
+
+  <!-- Integración de Facebook -->
+  <h2 style="text-align: center; margin-bottom: 20px;">Lo más reciente:</h2>
+
+  <div class="fb-container">
+      <div class="fb-page" 
+           data-href="https://www.facebook.com/profile.php?id=61561192434782" 
+           data-tabs="timeline" 
+           data-width="" 
+           data-height="" 
+           data-small-header="false" 
+           data-adapt-container-width="true" 
+           data-hide-cover="false" 
+           data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/profile.php?id=61561192434782" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/profile.php?id=61561192434782">Lili Repostería</a>
+          </blockquote>
+      </div>
+  </div>
     <footer>
         &copy; 2023 Lili Repostería. Todos los derechos reservados.
     </footer>
@@ -46,6 +133,58 @@
     <!-- Incluir SDK de Facebook para JavaScript -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v13.0"></script>
+    <script>
+let currentImageIndex = 0;
+const images = [];
+
+function openModal(src, alt) {
+    // Limpiar la lista de imágenes antes de establecer el nuevo modal
+    images.length = 0;
+
+    const allImages = document.querySelectorAll('.gallery-images img');
+    allImages.forEach((img, index) => {
+        images.push({ src: img.src, alt: img.alt });
+    });
+
+    // Establecer el índice actual de la imagen
+    currentImageIndex = [...allImages].findIndex(img => img.src === src);
+
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const caption = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImage.src = src;
+    modalImage.alt = alt;
+    caption.textContent = alt;
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+function changeImage(direction) {
+    currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+
+    const modalImage = document.getElementById("modalImage");
+    const caption = document.getElementById("caption");
+    
+    modalImage.src = images[currentImageIndex].src;
+    modalImage.alt = images[currentImageIndex].alt;
+    caption.textContent = images[currentImageIndex].alt;
+}
+
+// Añade los eventos a los botones de navegación
+document.querySelector('.prev').onclick = function(event) {
+    event.stopPropagation(); // Evita que el clic se propague y cierre el modal
+    changeImage(-1);
+};
+
+document.querySelector('.next').onclick = function(event) {
+    event.stopPropagation(); // Evita que el clic se propague y cierre el modal
+    changeImage(1);
+};
+    </script>
 </body>
 
 </html>
