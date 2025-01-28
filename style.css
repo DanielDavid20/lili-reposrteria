@@ -118,6 +118,7 @@ p {
     box-shadow: 0 2px 5px rgb(77, 255, 46); 
     width: calc(25% - 20px); 
     transition: transform 0.3s, box-shadow 0.3s; /* Añadido efecto de sombra */
+    background-image: url(imagenes/fimg.jpg); /* Fondo de la galería */
 }
 
 .image-container:hover {
