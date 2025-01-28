@@ -6,22 +6,45 @@ body {
     align-items: center; /* Centra horizontalmente */
     min-height: 100vh; /* Ocupa toda la altura de la ventana */
     margin: 0; /* Elimina márgenes predeterminados */
-     font-family: 'Brush Script MT', cursive; /* Fuente general en cursiva */
+    font-family: 'Arial', sans-serif; /* Fuente Arial, no cursiva */
   
     background-color: rgb(255, 255, 255);
     
     color: #1b460e; /* Color de texto oscuro para buena legibilidad */
-    font-size: 25px;
+    font-size: 18px;
 }
 
 /* Estilo del header */
 header {
     background: linear-gradient(to right, #e7cdff, #cafcc6); /* Degradado atractivo */
-    
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea verticalmente */
     color: rgb(21, 61, 26); /* Color del texto del header */
     text-align: center; /* Alineación del texto */
     width: 100%; /* Asegura que el header ocupa todo el ancho */
     box-shadow: 0 4px 10px rgb(0, 0, 0); /* Sombra para profundidad */
+    padding: 10px; /* Añadir un poco de padding para mejor presentación */
+}
+
+/* Asegúrate de que el contenido dentro del header también esté centrado correctamente */
+.header-content {
+    display: flex;
+    flex-direction: column; /* Si quieres que todo esté en una columna */
+    align-items: center; /* Centra hijos en la dirección transversal (horizontal cuando usamos columna) */
+    gap: 15px; /* Espacio entre los elementos, ajusta según sea necesario */
+}
+
+/* Añadir margen a los elementos dentro del header-content */
+.header-content h1 {
+    margin: 0; /* Elimina márgenes predeterminados en h1 */
+}
+
+.header-content .menu {
+    margin: 0; /* Elimina márgenes predeterminados en el menú, si es necesario */
+}
+h1 {
+    margin-right: 15px;  /* Espacio entre el título y el menú */
 }
 /* Estilo para el logo en el encabezado */
 .logo {
@@ -29,44 +52,54 @@ header {
     height: auto; /* Altura automática para mantener la proporción */
 }
 
-     /* Estilos para el menú */
-     .menu {
-        position: relative;
-        display: inline-block;
-    }
-    
+ /* Estilos para el menú */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Asegura que se muestre justo debajo del icono */
+    background-color: #f9d8ff;
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgb(28, 56, 21);
+    border-radius: 5px;
+    padding: 8px;
+    z-index: 1000; /* Asegura que esté en la parte superior */
+    text-align: left;
+    right: 0; /* Alinea el menú a la derecha por defecto */
+}
+
+/* Esto hará que en pantallas grandes el menú se desplace a la derecha */
+@media (min-width: 600px) {
     .menu-content {
-        display: none;
-        position: absolute;
-        background-color: #f9d8ff;
-        min-width: 120px;
-        box-shadow: 0 4px 8px rgb(28, 56, 21);
-        border-radius: 5px;
-        padding: 8px;
-        z-index: 1;
-        text-align: left;
+        left: 0; /* Muestra el menú hacia la izquierda si hay suficiente espacio */
+        right: auto; /* Asegura que no se use right cuando left está activo */
     }
-    
-    .menu-content a {
-        display: block;
-        padding: 6px 12px;
-        color: #113a1d;
-        text-decoration: none;
-        transition: background-color 0.3s;
-        font-size: 16px; /* Tamaño del texto de los enlaces */
-    }
-    
-    .menu-content a:hover {
-        background-color: #b9f1c1;
-    }
+}
 
-    .menu span {
-        font-size: 30px; /* Aumento del tamaño del icono */
-    }
+.menu-content a {
+    display: block;
+    padding: 6px 12px;
+    color: #113a1d;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Tamaño del texto de los enlaces */
+}
 
-    .menu:hover .menu-content {
-        display: block;
-    }
+.menu-content a:hover {
+    background-color: #b9f1c1;
+}
+
+.menu span {
+    font-size: 30px; /* Aumento del tamaño del icono */
+}
+
+.menu:hover .menu-content {
+    display: block; /* Muestra el contenido al pasar el mouse */
+}
 /* Estilo del título del header */
 header h1 {
     margin: 0; /* Elimina margen */
@@ -292,7 +325,7 @@ p2 {
     background-color: rgb(255, 255, 255);
     background-image: url(imagenes/papel.jpg);
     border-radius: 6%;
-    font-size: 25px;
+    font-size: 18px;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     padding: 5px; /* opcional: ayuda a que el texto no toque los bordes */
 }
