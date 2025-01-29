@@ -44,7 +44,7 @@ header {
     margin: 0; /* Elimina márgenes predeterminados en el menú, si es necesario */
 }
 h1 {
-    margin-right: 15px;  /* Espacio entre el título y el menú */
+    margin-right: 20px;  /* Espacio entre el título y el menú */
 }
 /* Estilo para el logo en el encabezado */
 .logo {
@@ -200,7 +200,7 @@ p {
 footer {
     text-align: center; 
     padding: 20px; 
-    background-color: #15e226; 
+    background-color: #d0b2ea; 
     color: #333; 
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
 }
@@ -328,4 +328,22 @@ p2 {
     font-size: 18px;
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
     padding: 5px; /* opcional: ayuda a que el texto no toque los bordes */
+}
+
+.social-media {
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: center; /* Centrar horizontalmente los iconos */
+    gap: 10px; /* Espacio entre los iconos */
+    margin-top: 10px; /* Espacio superior para mejor separación */
+}
+
+.social-media a img {
+    width: 35px; /* Tamaño reducido para los iconos */
+    height: 30px; /* Tamaño reducido para los iconos */
+    transition: transform 0.3s ease; /* Animación suave al pasar el cursor */
+    border-radius: 50%; /* Bordes totalmente redondeados (círculo) */
+}
+
+.social-media a img:hover {
+    transform: scale(1.1); /* Aumentar un poco el tamaño al pasar el cursor */
 }
